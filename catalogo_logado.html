@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Catálogo</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			function gotoPage(page) {
+				window.location.href = page;
+			}
+		</script>
+		<script>
+			var selected = {
+				".caneca" : false,
+				".samba" : false,
+				".tirante" : false,
+				".colete" : false,
+				".saia" : false,
+			}
+
+			var todos = true;
+
+			function showOnly() {
+				for (i in selected) {
+					console.log(i + " " + selected[i]);
+					if (selected[i] || todos) {
+						$(i).show()
+					} else {
+						$(i).hide();
+					}
+				}
+			}
+
+			$(document).ready(function() {
+				$("#caneca_cbox").change(function() {
+					selected[".caneca"] = this.checked;
+					showOnly();
+				});
+
+				$("#samba_cbox").change(function() {
+					selected[".samba"] = this.checked;
+					showOnly();
+				});
+
+				$("#tirante_cbox").change(function() {
+					selected[".tirante"] = this.checked;
+					showOnly();
+				});
+
+				$("#colete_cbox").change(function() {
+					selected[".colete"] = this.checked;
+					showOnly();
+				});
+
+				$("#saia_cbox").change(function() {
+					selected[".saia"] = this.checked;
+					showOnly();
+				});
+
+				$("#todos_cbox").change(function() {
+					todos = this.checked;
+					showOnly();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bar">
+				<div class="account_bar">
+					<input type="button" class="bar_button signin_button" onclick="gotoPage('catalogo.html')" value="Sign Out"/>
+					<input type="button" class="bar_button login_button" onclick="gotoPage('#')" value="Gerenciar"/>
+				</div>
+
+				<div class="search_bar">
+					<input type="text" class="search_box" placeholder="Caneca, Samba..."/>
+					<input type="button" class="bar_button search_button" value="Buscar"/>
+				</div>
+			</div>
+
+			<div class="site_map">
+				<a href="index_logado.html">Menu</a>
+				<spam>></spam>
+				<a href="#">Catálogo</a>
+				<input type="button" class="bar_button font_button" value="A+"/>
+				<input type="button" class="bar_button font_button" value="A-"/>
+			</div>
+
+			<div class="filter_box col-8 col-s-12">
+				<div class="col-12 col-s-12">
+					<label class="filter col-4 col-s-4">Todos
+						<input type="checkbox" id="todos_cbox" checked="">
+						<span class="checkmark"></span>
+					</label>
+					<label class="filter col-4 col-s-4">Caneca
+						<input type="checkbox" id="caneca_cbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="filter col-4 col-s-4">Samba
+						<input type="checkbox" id="samba_cbox">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+				<div class="col-12 col-s-12">
+					<label class="filter col-4 col-s-4">Tirante
+						<input type="checkbox" id="tirante_cbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="filter col-4 col-s-4">Colete
+						<input type="checkbox" id="colete_cbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="filter col-4 col-s-4">Saia
+						<input type="checkbox" id="saia_cbox">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+
+			<div class="cards">
+				<div class="card_wrapper col-4 col-s-6 caneca">
+					<a href="caneca_1_logado.html" class="card caneca_bg">
+						<img src="static/caneca/caneca_1.png" alt="">
+						<p>Caneca 1</p>
+						<p>R$ 20,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 caneca">
+					<a href="caneca_2_logado.html" class="card caneca_bg">
+						<img src="static/caneca/caneca_2.png" alt="">
+						<p>Caneca 2</p>
+						<p>R$ 20,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 caneca">
+					<a href="caneca_3_logado.html" class="card caneca_bg">
+						<img src="static/caneca/caneca_3.png" alt="">
+						<p>Caneca 3</p>
+						<p>R$ 20,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 caneca">
+					<a href="caneca_4_logado.html" class="card caneca_bg">
+						<img src="static/caneca/caneca_4.png" alt="">
+						<p>Caneca 4</p>
+						<p>R$ 20,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 caneca">
+					<a href="caneca_5_logado.html" class="card caneca_bg">
+						<img src="static/caneca/caneca_5.png" alt="">
+						<p>Caneca 5</p>
+						<p>R$ 20,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 samba">
+					<a href="samba_1_logado.html" class="card samba_bg">
+						<img src="static/samba/samba_1.png" alt="">
+						<p>Samba 1</p>
+						<p>R$ 30,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 samba">
+					<a href="samba_2_logado.html" class="card samba_bg">
+						<img src="static/samba/samba_2.png" alt="">
+						<p>Samba 2</p>
+						<p>R$ 30,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 samba">
+					<a href="samba_3_logado.html" class="card samba_bg">
+						<img src="static/samba/samba_3.png" alt="">
+						<p>Samba 3</p>
+						<p>R$ 30,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 samba">
+					<a href="samba_4_logado.html" class="card samba_bg">
+						<img src="static/samba/samba_4.png" alt="">
+						<p>Samba 4</p>
+						<p>R$ 30,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 samba">
+					<a href="samba_5_logado.html" class="card samba_bg">
+						<img src="static/samba/samba_5.png" alt="">
+						<p>Samba 5</p>
+						<p>R$ 30,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 tirante">
+					<a href="tirante_1_logado.html" class="card tirante_bg">
+						<img src="static/tirante/tirante_1.png" alt="">
+						<p>Tirante 1</p>
+						<p>R$ 10,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 tirante">
+					<a href="tirante_2_logado.html" class="card tirante_bg">
+						<img src="static/tirante/tirante_2.png" alt="">
+						<p>Tirante 2</p>
+						<p>R$ 10,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 tirante">
+					<a href="tirante_3_logado.html" class="card tirante_bg">
+						<img src="static/tirante/tirante_3.png" alt="">
+						<p>Tirante 3</p>
+						<p>R$ 10,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 tirante">
+					<a href="tirante_4_logado.html" class="card tirante_bg">
+						<img src="static/tirante/tirante_4.png" alt="">
+						<p>Tirante 4</p>
+						<p>R$ 10,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 tirante">
+					<a href="tirante_5_logado.html" class="card tirante_bg">
+						<img src="static/tirante/tirante_5.png" alt="">
+						<p>Tirante 5</p>
+						<p>R$ 10,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 colete">
+					<a href="colete_1_logado.html" class="card colete_bg">
+						<img src="static/colete/colete_1.png" alt="">
+						<p>Colete 1</p>
+						<p>R$ 25,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 colete">
+					<a href="colete_2_logado.html" class="card colete_bg">
+						<img src="static/colete/colete_2.png" alt="">
+						<p>Colete 2</p>
+						<p>R$ 25,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 colete">
+					<a href="colete_3_logado.html" class="card colete_bg">
+						<img src="static/colete/colete_3.png" alt="">
+						<p>Colete 3</p>
+						<p>R$ 25,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 colete">
+					<a href="colete_4_logado.html" class="card colete_bg">
+						<img src="static/colete/colete_4.png" alt="">
+						<p>Colete 4</p>
+						<p>R$ 25,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 colete">
+					<a href="colete_5_logado.html" class="card colete_bg">
+						<img src="static/colete/colete_5.png" alt="">
+						<p>Colete 5</p>
+						<p>R$ 25,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 saia">
+					<a href="saia_1_logado.html" class="card saia_bg">
+						<img src="static/saia/saia_1.png" alt="">
+						<p>Saia 1</p>
+						<p>R$ 22,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 saia">
+					<a href="saia_2_logado.html" class="card saia_bg">
+						<img src="static/saia/saia_2.png" alt="">
+						<p>Saia 2</p>
+						<p>R$ 22,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 saia">
+					<a href="saia_3_logado.html" class="card saia_bg">
+						<img src="static/saia/saia_3.png" alt="">
+						<p>Saia 3</p>
+						<p>R$ 22,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 saia">
+					<a href="saia_4_logado.html" class="card saia_bg">
+						<img src="static/saia/saia_4.png" alt="">
+						<p>Saia 4</p>
+						<p>R$ 22,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+
+				<div class="card_wrapper col-4 col-s-6 saia">
+					<a href="saia_5_logado.html" class="card saia_bg">
+						<img src="static/saia/saia_5.png" alt="">
+						<p>Saia 5</p>
+						<p>R$ 22,00</p>
+						<p>Atlética Comp.</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

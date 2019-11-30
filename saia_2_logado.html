@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Saia 2</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+		<script type="text/javascript">
+			function gotoPage(page) {
+				window.location.href = page;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bar">
+				<div class="account_bar">
+					<input type="button" class="bar_button signin_button" onclick="gotoPage('saia_2.html')" value="Sign Out"/>
+					<input type="button" class="bar_button login_button" onclick="gotoPage('#')" value="Gerenciar"/>
+				</div>
+
+				<div class="search_bar">
+					<input type="text" class="search_box" placeholder="Caneca, Samba..."/>
+					<input type="button" class="bar_button search_button" value="Buscar"/>
+				</div>
+			</div>
+
+			<div class="site_map">
+				<a href="index_logado.html">Menu</a>
+				<spam>></spam>
+				<a href="catalogo_logado.html">Catálogo</a>
+				<spam>></spam>
+				<a href="#">Saia 2</a>
+				<input type="button" class="bar_button font_button" value="A+"/>
+				<input type="button" class="bar_button font_button" value="A-"/>
+			</div>
+
+			<div class="col-8 col-s-12">
+				<div class="col-6 col-s-6 aux" style="float: left; padding: 20px;">
+					<div class="product_info col-12 col-s-12">
+						<p class="text_field_label">Produto</p>
+						<div class="text_field">
+							<p>Saia 2</p>
+						</div>
+						<br>
+						<p class="text_field_label">Preço</p>
+						<div class="text_field">
+							<p>R$ 22,00</p>
+						</div>
+						<br>
+						<p class="text_field_label">Vendedor</p>
+						<div class="text_field">
+							<p>Atlética Comp.</p>
+						</div>
+						<br>
+						<p class="text_field_label">Contato</p>
+						<div>
+							<p class="big_text">
+								(16) 99876-5432<br>
+								Facebook: Atlética<br>
+							</p>
+						</div>
+						<br>
+						<p class="text_field_label">Descrição</p>
+						<div>
+							<p class="big_text">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6 col-s-6 aux" style="float: left; padding: 20px;">
+					<div class="product_image col-12 col-s-12">
+						<img src="static/saia/saia_2.png" style="width: 100%;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

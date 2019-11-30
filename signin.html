@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign In</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+		<script type="text/javascript">
+			function gotoPage(page) {
+				window.location.href = page;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bar">
+				<div class="account_bar">
+					<input type="button" class="bar_button signin_button" onclick="f('signin_options.html')" value="Sign In"/>
+					<input type="button" class="bar_button login_button" onclick="f('login.html')" value="Login"/>
+				</div>
+
+				<div class="search_bar">
+					<input type="text" class="search_box" placeholder="Caneca, Samba..."/>
+					<input type="button" class="bar_button search_button" value="Buscar"/>
+				</div>
+			</div>
+
+			<div class="site_map">
+				<a href="index.html">Menu</a>
+				<spam>></spam>
+				<a href="signin.html">Sign In</a>
+				<input type="button" class="bar_button font_button" value="A+"/>
+				<input type="button" class="bar_button font_button" value="A-"/>
+			</div>
+
+			<div class="col-6 col-s-12">
+				<p class="text_field_label">Nome Completo</p>
+				<div class="text_field">
+					<input type="text" placeholder="Nome Completo"/>
+				</div>
+
+				<p class="text_field_label">Email</p>
+				<div class="text_field">
+					<input type="text" placeholder="Email"/>
+				</div>
+
+				<p class="text_field_label">Senha</p>
+				<div class="text_field">
+					<input type="password" placeholder="Senha"/>
+				</div>
+
+				<p class="text_field_label">Confirmar Senha</p>
+				<div class="text_field">
+					<input type="password" placeholder="Confirmar Senha"/>
+				</div>
+
+				<p class="text_field_label">Quem representa</p>
+				<div class="text_field">
+					<input type="password" placeholder="Quem representa"/>
+				</div>
+
+				<br>
+				<br>
+
+				<div class="col-4 col-s-6">
+				<div class="button_wrapper col-12 col-s-12">
+					<a href="index_logado.html" class="button_anuncio">
+						<p>Concluir</p>
+					</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

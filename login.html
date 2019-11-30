@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+		<script type="text/javascript">
+			function gotoPage(page) {
+				window.location.href = page;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bar">
+				<div class="account_bar">
+					<input type="button" class="bar_button signin_button" onclick="gotoPage('signin_options.html')" value="Sign In"/>
+					<input type="button" class="bar_button login_button" onclick="gotoPage('login.html')" value="Login"/>
+				</div>
+
+				<div class="search_bar">
+					<input type="text" class="search_box" placeholder="Caneca, Samba..."/>
+					<input type="button" class="bar_button search_button" value="Buscar"/>
+				</div>
+			</div>
+
+			<div class="site_map">
+				<a href="index.html">Menu</a>
+				<spam>></spam>
+				<a href="login.html">Login</a>
+				<input type="button" class="bar_button font_button" value="A+"/>
+				<input type="button" class="bar_button font_button" value="A-"/>
+			</div>
+
+			<div class="col-3 col-s-4">
+				<p class="text_field_label">Email</p>
+				<div class="text_field">
+					<input type="text" placeholder="Email"/>
+				</div>
+
+				<p class="text_field_label">Senha</p>
+				<div class="text_field">
+					<input type="text" placeholder="Senha"/>
+				</div>
+
+				<br>
+				<br>
+
+				<div class="col-8 col-s-12">
+				<div class="button_wrapper col-12 col-s-12">
+					<a href="index_logado.html" class="button_anuncio">
+						<p>Concluir</p>
+					</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

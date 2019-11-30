@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Catálogo de produtos</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+		<script type="text/javascript">
+			function gotoPage(page) {
+				window.location.href = page;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bar">
+				<div class="account_bar">
+					<input type="button" class="bar_button signin_button" onclick="gotoPage('signin_options.html')" value="Sign In"/>
+					<input type="button" class="bar_button login_button" onclick="gotoPage('login.html')" value="Login"/>
+				</div>
+
+				<div class="search_bar">
+					<input type="text" class="search_box" placeholder="Caneca, Samba..."/>
+					<input type="button" class="bar_button search_button" value="Buscar"/>
+				</div>
+			</div>
+
+			<div class="site_map">
+				<a href="index.html">Menu</a>
+				<input type="button" class="bar_button font_button" value="A+"/>
+				<input type="button" class="bar_button font_button" value="A-"/>
+			</div>
+
+			<div class="col-8 col-s-12">
+				<div class="button_wrapper col-6 col-s-6">
+					<a href="catalogo.html" class="button">
+						<img src="static/geral/catalogo_500.png" alt="">
+						<p>Catálogo</p>
+					</a>
+				</div>
+
+				<div class="button_wrapper col-6 col-s-6">
+					<a href="signin_options.html" class="button">
+						<img src="static/geral/megafone_500.png" alt="">
+						<p>Anúncio</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-4 col-s-6">
+				<div class="button_wrapper col-12 col-s-12">
+					<a href="fornecedores.html" class="button">
+						<img src="static/geral/caixa_500.png" alt="">
+						<p>Fornecedor</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

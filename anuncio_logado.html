@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anúncio</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#image_upload").on('change', function() {
+					var qt = $(this)[0].files.length;
+
+					if (qt == 0) {
+						$("#qt_files").text("Nenhum arquivos escolhidos");
+					} else if (qt == 1) {
+						$("#qt_files").text("1 arquivo escolhido");
+					} else {
+						$("#qt_files").text(qt + " arquivos escolhidos");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bar">
+				<div class="account_bar">
+					<input type="button" class="bar_button signin_button" value="Sign In"/>
+					<input type="button" class="bar_button login_button" value="Login"/>
+				</div>
+
+				<div class="search_bar">
+					<input type="text" class="search_box" placeholder="Caneca, Samba..."/>
+					<input type="button" class="bar_button search_button" value="Buscar"/>
+				</div>
+			</div>
+
+			<div class="site_map">
+				<a href="index_logado.html">Menu</a>
+				<spam>></spam>
+				<a href="anuncio_logado.html">Anúncio</a>
+				<input type="button" class="bar_button font_button" value="A+"/>
+				<input type="button" class="bar_button font_button" value="A-"/>
+			</div>
+
+			<div class="col-6 col-s-12">
+				<p class="text_field_label">Nome do Produto</p>
+				<div class="text_field">
+					<input type="text" placeholder="Nome"/>
+				</div>
+
+				<p class="text_field_label">Preço</p>
+				<div class="text_field">
+					<input type="text" placeholder="Preço"/>
+				</div>
+
+				<p class="text_field_label">Nome do Vendedor</p>
+				<div class="text_field">
+					<input type="text" placeholder="Nome do Vendedor"/>
+				</div>
+
+				<p class="text_field_label">Contato</p>
+				<div class="text_area">
+					<textarea placeholder="Telefone, email, facebook, instagram, whatsapp"></textarea>
+				</div>
+
+				<p class="text_field_label">Descrição</p>
+				<div class="text_area">
+					<textarea placeholder="#PraCegoVer, Descrição do produto, características"></textarea>
+				</div>
+
+				<p class="text_field_label">Imagens</p>
+				<div class="image_upload">
+					<label for="image_upload">
+						Escolher imagens
+					</label>
+					<p id="qt_files">Nenhum arquivo escolhido</p>
+					<input id="image_upload" type="file" multiple>
+				</div>
+
+				<div class="col-4 col-s-6">
+				<div class="button_wrapper col-12 col-s-12">
+					<a href="index_logado.html" class="button_anuncio">
+						<p>Concluir</p>
+					</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>
